@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">My Calculator Progect</string>
+    <string name="button1">1</string>
+    <string name="button2">2</string>
+    <string name="button3">3</string>
+    <string name="button4">4</string>
+    <string name="button5">5</string>
+    <string name="button6">6</string>
+    <string name="button7">7</string>
+    <string name="button8">8</string>
+    <string name="button9">9</string>
+    <string name="button0">0</string>
+    <string name="button00">00</string>
+    <string name="button_dot">.</string>
+    <string name="buttonMinus">-</string>
+    <string name="buttonPlus">+</string>
+    <string name="buttonEqually">=</string>
+    <string name="button_division">/</string>
+    <string name="button_multiplication">*</string>
+    <string name="button_nullify">©</string>
+    <string name="button_delete">←</string>
+</resources>
