@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="calculator_buttons_1">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/lite_gray</item>
+        <item name="android:textColor">@color/orange</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+    <style name="calculator_buttons_2">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:backgroundTint">@color/gray</item>
+        <item name="android:textColor">@color/design_default_color_error</item>
+        <item name="android:textSize">30sp</item>
+    </style>
+</resources>
+
