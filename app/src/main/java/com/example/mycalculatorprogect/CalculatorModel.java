@@ -20,14 +20,19 @@ public class CalculatorModel {
         state = State.arg1_input;
     }
 
-    public void onNumButtonPress(int button_Id) {
+    public void onNumButtonPress(int numButton_Id) {
         if (state == State.resultShow) {
             state = State.arg1_input;
+            arg1 = Double.parseDouble(inputString.toString());
             inputString.setLength(0);
+            state = State.arg2_input;
         }
 
         if (inputString.length() < 9) {
-            switch (button_Id) {
+            switch (numButton_Id) {
+                case R.id.btn_dot:
+                    inputString.append(".");
+                    break;
                 case R.id.btn_0:
                     if (inputString.length() != 0) {
                         inputString.append("0");
@@ -71,7 +76,7 @@ public class CalculatorModel {
 
     public void onOperandPress(int operand_Id) {
         if (operand_Id == R.id.btn_equally && state == State.arg2_input) {
-            arg2 = Integer.parseInt(inputString.toString());
+            arg2 = Double.parseDouble(inputString.toString());
             state = State.resultShow;
             inputString.setLength(0);
             switch (OperandSelected) {
@@ -89,7 +94,7 @@ public class CalculatorModel {
                     break;
             }
         } else if (inputString.length() > 0 && state == State.arg1_input) {
-            arg1 = Integer.parseInt(inputString.toString());
+            arg1 = Double.parseDouble(inputString.toString());
             state = State.arg2_input;
             inputString.setLength(0);
         }
@@ -110,16 +115,19 @@ public class CalculatorModel {
             case R.id.btn_equally:
                 OperandSelected = R.id.btn_equally;
                 break;
+        }
+    }
 
-           /* case R.id.btn_delete:
-                OperandSelected = R.id.btn_delete;
-                break;
-            case R.id.btn_dot:
-                OperandSelected = R.id.btn_dot;
-                break;
-            case R.id.btn_nullify:
-                OperandSelected = R.id.btn_nullify;
-                break;*/
+    public void onAdditionButtonPress(int addButton_Id) {
+        if (addButton_Id == R.id.btn_delete && inputString.length() > 0 && state == State.arg1_input) {
+            inputString = inputString.deleteCharAt(inputString.length()-1);
+            state = State.arg1_input;
+        } else if (addButton_Id == R.id.btn_delete && inputString.length() > 0 && state == State.arg2_input) {
+            inputString = inputString.deleteCharAt(inputString.length()-1);
+            state = State.arg2_input;
+        } else if (addButton_Id == R.id.btn_nullify){
+            inputString.setLength(0);
+            state = State.arg1_input;
         }
     }
 

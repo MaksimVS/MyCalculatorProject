@@ -4,10 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
 
     private CalculatorModel calculator;
     private TextView textValue;
@@ -22,12 +21,16 @@ public class MainActivity extends AppCompatActivity {
                 R.id.btn_minus,
                 R.id.btn_multiplication,
                 R.id.btn_division,
+                R.id.btn_equally
+        };
+
+        int[] AddButton_id = new int[]{
                 R.id.btn_nullify,
-                R.id.btn_dot,
-                R.id.btn_equally,
                 R.id.btn_delete
         };
+
         int[] NumButton_id = new int[]{
+                R.id.btn_dot,
                 R.id.btn_1,
                 R.id.btn_2,
                 R.id.btn_3,
@@ -44,27 +47,32 @@ public class MainActivity extends AppCompatActivity {
         textValue = findViewById(R.id.textValue);
         calculator = new CalculatorModel();
 
-        View.OnClickListener NumButtonClickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                calculator.onNumButtonPress(v.getId());
-                textValue.setText(calculator.getText());
-            }
+        View.OnClickListener NumButtonClickListener = v -> {
+            calculator.onNumButtonPress(v.getId());
+            textValue.setText(calculator.getText());
         };
 
-        View.OnClickListener OperandClickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                calculator.onOperandPress(v.getId());
-                textValue.setText(calculator.getText());
-            }
+        View.OnClickListener OperandClickListener = v -> {
+            calculator.onOperandPress(v.getId());
+            textValue.setText(calculator.getText());
         };
 
-        for (int i = 0; i < NumButton_id.length; i++) {
-            findViewById(NumButton_id[i]).setOnClickListener(NumButtonClickListener);
+        View.OnClickListener AddButtonClickListener = v -> {
+            calculator.onAdditionButtonPress(v.getId());
+            textValue.setText(calculator.getText());
+        };
+
+        for (int value : NumButton_id) {
+            findViewById(value).setOnClickListener(NumButtonClickListener);
         }
         for (int i = 0; i < Operand_id.length; i++) {
             findViewById(Operand_id[i]).setOnClickListener(OperandClickListener);
         }
+
+        for (int i = 0; i < AddButton_id.length; i++) {
+            findViewById(AddButton_id[i]).setOnClickListener(AddButtonClickListener);
+        }
+
+
     }
 }

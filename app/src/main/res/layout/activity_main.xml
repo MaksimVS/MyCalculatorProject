@@ -17,15 +17,13 @@
 
     <TextView
         android:id="@+id/textValue"
+        style="@style/calculator_viev"
         android:background="@drawable/text_viev"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:gravity="right"
         android:inputType="numberDecimal"
         android:text="0"
-        android:textColor="@color/design_default_color_error"
-        android:textSize="100sp" />
+         />
 
     <GridLayout
         android:layout_width="wrap_content"
