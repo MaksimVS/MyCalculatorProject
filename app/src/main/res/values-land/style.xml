@@ -1,26 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="calculator_buttons_1">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:backgroundTint">@color/lite_gray</item>
-        <item name="android:textColor">@color/orange</item>
-        <item name="android:textSize">@dimen/my_text_size_20</item>
-    </style>
-    <style name="calculator_buttons_2">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:backgroundTint">@color/gray</item>
-        <item name="android:textColor">@color/design_default_color_error</item>
-        <item name="android:textSize">@dimen/my_text_size_20</item>
-    </style>
-    <style name="title_box_personalization">
-        <item name="android:text">@string/calculator</item>
-        <item name="android:textColor">@color/orange</item>
+    <style name="calculator_buttons_1.NewStyle">
         <item name="android:textSize">20sp</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginHorizontal">20dp</item>
-        <item name="android:layout_marginVertical">5dp</item>
+    </style>
+
+    <style name="calculator_buttons_2.NewStyle">
+        <item name="android:textSize">20sp</item>
     </style>
 </resources>

@@ -1,46 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="calculator_buttons_1">
+    <style name="calculator_buttons_1" parent="Widget.MaterialComponents.Button">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:backgroundTint">@color/lite_gray</item>
         <item name="android:textColor">@color/orange</item>
-        <item name="android:textSize">@dimen/my_text_size_30</item>
+        <item name="android:textSize">30sp</item>
     </style>
 
-    <style name="calculator_buttons_2">
+    <style name="calculator_buttons_2" parent="Widget.MaterialComponents.Button">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:backgroundTint">@color/gray</item>
         <item name="android:textColor">@color/design_default_color_error</item>
-        <item name="android:textSize">@dimen/my_text_size_30</item>
-    </style>
-
-    <style name="view_calculator_values">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingTop">10dp</item>
-        <item name="android:paddingBottom">10dp</item>
-        <item name="android:paddingRight">10dp</item>
-        <item name="android:textColor">@color/design_default_color_error</item>>
-        <item name="android:textSize">@dimen/my_text_size_50</item>
-    </style>
-
-    <style name="layout_personalization">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">match_parent</item>
-        <item name="android:layout_gravity">center</item>
-        <item name="android:background">@color/pink</item>
-        <item name="android:orientation">vertical</item>
-    </style>
-
-    <style name="title_box_personalization">
-        <item name="android:text">@string/calculator</item>
-        <item name="android:textColor">@color/orange</item>
-        <item name="android:textSize">20sp</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_margin">15dp</item>
+        <item name="android:textSize">30sp</item>
     </style>
 </resources>
 

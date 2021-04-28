@@ -1,6 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name= "my_text_size_50">50sp</dimen>
-    <dimen name= "my_text_size_20">20sp</dimen>
-    <dimen name= "my_text_size_30">30sp</dimen>
+
 </resources>
