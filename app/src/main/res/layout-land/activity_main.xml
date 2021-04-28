@@ -48,118 +48,99 @@
             <Button
                 android:id="@+id/btn_1"
                 android:text="@string/button1"
-                style="@style/calculator_buttons_1"
-                android:textSize="20sp" />
+                style="@style/calculator_buttons_1" />
 
             <Button
                 android:id="@+id/btn_2"
                 android:text="@string/button2"
-                style="@style/calculator_buttons_1"
-                android:textSize="20sp" />
+                style="@style/calculator_buttons_1" />
 
             <Button
                 android:id="@+id/btn_3"
                 android:text="@string/button3"
-                style="@style/calculator_buttons_1"
-                android:textSize="20sp" />
+                style="@style/calculator_buttons_1" />
 
             <Button
                 android:id="@+id/btn_delete"
                 android:text="@string/button_delete"
-                style="@style/calculator_buttons_2"
-                android:textSize="20sp" />
+                style="@style/calculator_buttons_2" />
 
             <Button
                 android:id="@+id/btn_plus"
                 android:text="@string/buttonPlus"
-                style="@style/calculator_buttons_2"
-                android:textSize="20sp" />
+                style="@style/calculator_buttons_2" />
 
             <Button
                 android:id="@+id/btn_4"
                 android:text="@string/button4"
-                style="@style/calculator_buttons_1"
-                android:textSize="20sp" />
+                style="@style/calculator_buttons_1" />
 
             <Button
                 android:id="@+id/btn_5"
                 android:text="@string/button5"
-                style="@style/calculator_buttons_1"
-                android:textSize="20sp" />
+                style="@style/calculator_buttons_1" />
 
             <Button
                 android:id="@+id/btn_6"
                 android:text="@string/button6"
-                style="@style/calculator_buttons_1"
-                android:textSize="20sp" />
+                style="@style/calculator_buttons_1" />
 
             <Button
                 android:id="@+id/btn_dot"
                 android:text="@string/button_dot"
-                style="@style/calculator_buttons_2"
-                android:textSize="20sp" />
+                style="@style/calculator_buttons_2" />
 
             <Button
                 android:id="@+id/btn_minus"
                 android:text="@string/buttonMinus"
-                style="@style/calculator_buttons_2"
-                android:textSize="20sp" />
+                style="@style/calculator_buttons_2" />
 
             <Button
                 android:id="@+id/btn_7"
                 android:text="@string/button7"
-                style="@style/calculator_buttons_1"
-                android:textSize="20sp" />
+                style="@style/calculator_buttons_1" />
 
             <Button
                 android:id="@+id/btn_8"
                 android:text="@string/button8"
-                style="@style/calculator_buttons_1"
-                android:textSize="20sp" />
+                style="@style/calculator_buttons_1" />
 
             <Button
                 android:id="@+id/btn_9"
                 android:text="@string/button9"
-                style="@style/calculator_buttons_1"
-                android:textSize="20sp" />
+                style="@style/calculator_buttons_1" />
 
             <Button
                 android:id="@+id/btn_division"
                 android:text="@string/button_division"
-                style="@style/calculator_buttons_2"
-                android:textSize="20sp" />
+                style="@style/calculator_buttons_2" />
 
             <Button
                 android:id="@+id/btn_multiplication"
                 android:text="@string/button_multiplication"
-                style="@style/calculator_buttons_2"
-                android:textSize="20sp" />
+                style="@style/calculator_buttons_2" />
 
             <Button
                 android:id="@+id/btn_0"
                 android:text="@string/button0"
-                style="@style/calculator_buttons_1"
-                android:textSize="20sp" />
+                style="@style/calculator_buttons_1" />
 
             <Button
                 android:id="@+id/btn_00"
                 android:text="@string/button00"
-                style="@style/calculator_buttons_1"
-                android:textSize="20sp" />
+                style="@style/calculator_buttons_1" />
 
             <Button
                 android:id="@+id/btn_nullify"
                 android:text="@string/button_nullify"
-                style="@style/calculator_buttons_2"
-                android:textSize="20sp" />
+                style="@style/calculator_buttons_2" />
 
             <Button
                 android:id="@+id/btn_equally"
                 style="@style/calculator_buttons_2"
                 android:text="@string/buttonEqually"
                 android:layout_gravity="fill_horizontal"
-                android:layout_columnSpan="2"
-                android:textSize="20sp" />
+                android:layout_columnSpan="2" />
         </GridLayout>
     </LinearLayout>
 </LinearLayout>
