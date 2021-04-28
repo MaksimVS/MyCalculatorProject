@@ -19,4 +19,6 @@
     <string name="button_multiplication">*</string>
     <string name="button_nullify">©</string>
     <string name="button_delete">←</string>
+    <string name="calculator">calculator</string>
+    <string name="_0">0</string>
 </resources>

@@ -1,27 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="center"
-    android:background="@color/pink"
-    android:orientation="vertical">
+    style="@style/layout_personalization">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginVertical="5dp"
-        android:text="calculator"
-        android:textColor="@color/orange"
-        android:textSize="20sp" />
+        android:id="@+id/heading"
+        style="@style/title_box_personalization" />
 
     <TextView
         android:id="@+id/textValue"
-        style="@style/calculator_viev"
+        style="@style/view_calculator_values"
         android:layout_marginHorizontal="20dp"
-        android:background="@drawable/text_viev"
+        android:background="@drawable/window_decoration"
         android:gravity="end"
-        android:text="0"
+        android:text="@string/_0"
          />
 
     <LinearLayout
