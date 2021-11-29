@@ -1,6 +1,9 @@
 package com.example.mycalculatorproject;
 
-public class CalculatorModel {
+import android.os.Parcel;
+import android.os.Parcelable;
+
+public class CalculatorModel implements Parcelable {
 
     private double arg1;
     private double arg2;
@@ -9,6 +12,36 @@ public class CalculatorModel {
     private int OperandSelected;
 
     private State state;
+
+    protected CalculatorModel(Parcel in) {
+        arg1 = in.readDouble();
+        arg2 = in.readDouble();
+        OperandSelected = in.readInt();
+    }
+
+    public static final Creator<CalculatorModel> CREATOR = new Creator<CalculatorModel>() {
+        @Override
+        public CalculatorModel createFromParcel(Parcel in) {
+            return new CalculatorModel(in);
+        }
+
+        @Override
+        public CalculatorModel[] newArray(int size) {
+            return new CalculatorModel[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeDouble(arg1);
+        parcel.writeDouble(arg2);
+        parcel.writeInt(OperandSelected);
+    }
 
     private enum State {
         arg1_input,
@@ -120,12 +153,12 @@ public class CalculatorModel {
 
     public void onAdditionButtonPress(int addButton_Id) {
         if (addButton_Id == R.id.btn_delete && inputString.length() > 0 && state == State.arg1_input) {
-            inputString = inputString.deleteCharAt(inputString.length()-1);
+            inputString = inputString.deleteCharAt(inputString.length() - 1);
             state = State.arg1_input;
         } else if (addButton_Id == R.id.btn_delete && inputString.length() > 0 && state == State.arg2_input) {
-            inputString = inputString.deleteCharAt(inputString.length()-1);
+            inputString = inputString.deleteCharAt(inputString.length() - 1);
             state = State.arg2_input;
-        } else if (addButton_Id == R.id.btn_nullify){
+        } else if (addButton_Id == R.id.btn_nullify) {
             inputString.setLength(0);
             state = State.arg1_input;
         }
