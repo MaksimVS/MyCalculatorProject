@@ -6,6 +6,8 @@
         <item name="android:backgroundTint">@color/lite_gray</item>
         <item name="android:textColor">@color/orange</item>
         <item name="android:textSize">30sp</item>
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
     <style name="calculator_buttons_2" parent="Widget.MaterialComponents.Button">
@@ -14,6 +16,8 @@
         <item name="android:backgroundTint">@color/gray</item>
         <item name="android:textColor">@color/design_default_color_error</item>
         <item name="android:textSize">30sp</item>
+        <item name="android:fontFamily">cursive</item>
+        <item name="android:textStyle">bold</item>
     </style>
 </resources>
 
