@@ -1,5 +1,6 @@
 package com.example.mycalculatorproject;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -8,8 +9,9 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity  {
 
-    private CalculatorModel calculator;
+    private CalculatorModel calculatorModel;
     private TextView textValue;
+    private static final String ARG_KEY = "ARG_KEY";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,35 +46,49 @@ public class MainActivity extends AppCompatActivity  {
                 R.id.btn_00
         };
 
+        if (savedInstanceState != null){
+            calculatorModel = savedInstanceState.getParcelable(ARG_KEY);
+        }
+
         textValue = findViewById(R.id.textValue);
-        calculator = new CalculatorModel();
+        calculatorModel = new CalculatorModel();
+        textValue.setText(String.valueOf(calculatorModel.getText()));
 
         View.OnClickListener NumButtonClickListener = v -> {
-            calculator.onNumButtonPress(v.getId());
-            textValue.setText(calculator.getText());
+            calculatorModel.onNumButtonPress(v.getId());
+            textValue.setText(calculatorModel.getText());
         };
 
         View.OnClickListener OperandClickListener = v -> {
-            calculator.onOperandPress(v.getId());
-            textValue.setText(calculator.getText());
+            calculatorModel.onOperandPress(v.getId());
+            textValue.setText(calculatorModel.getText());
         };
 
         View.OnClickListener AddButtonClickListener = v -> {
-            calculator.onAdditionButtonPress(v.getId());
-            textValue.setText(calculator.getText());
+            calculatorModel.onAdditionButtonPress(v.getId());
+            textValue.setText(calculatorModel.getText());
         };
 
         for (int value : NumButton_id) {
             findViewById(value).setOnClickListener(NumButtonClickListener);
         }
-        for (int i = 0; i < Operand_id.length; i++) {
-            findViewById(Operand_id[i]).setOnClickListener(OperandClickListener);
+        for (int j : Operand_id) {
+            findViewById(j).setOnClickListener(OperandClickListener);
         }
 
-        for (int i = 0; i < AddButton_id.length; i++) {
-            findViewById(AddButton_id[i]).setOnClickListener(AddButtonClickListener);
+        for (int j : AddButton_id) {
+            findViewById(j).setOnClickListener(AddButtonClickListener);
         }
 
-
+        findViewById(R.id.textValue).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textValue.setText(String.valueOf(calculatorModel.getText()));
+            }
+        });
+    }
+    protected void onSaveInstanceState(@NonNull Bundle outState){
+        super.onSaveInstanceState(outState);
+        outState.putParcelable(ARG_KEY,calculatorModel);
     }
 }
